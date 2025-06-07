@@ -20,10 +20,25 @@
 
     <link href="styles/normalize.css" rel="stylesheet" />
     <link href="styles/index.css" rel="stylesheet" />
-    <script src="scripts/main.js" defer></script>
+    <link href="styles/large.css" rel="stylesheet" />
+    <script src="scripts/main.js" type="module"></script>
   </head>
   <body>
-    <header><h1>Who Wants to Buy an Owlbear?</h1></header>
+    <nav id="sideNav">
+      <button id="NavOpenBtn"></button>
+      <ul class="sideNavItems">
+        <li><a href="#" title="home" class="active">Home</a></li>
+        <li><a href="armory.html" title="armory">Blacksmith's Shop</a></li>
+        <li><a href="potions.html" title="potions">Magic Shop</a></li>
+      </ul>
+      <div id="overlay"></div>
+    </nav>
+    <button id="NavHamburgerBtn"></button>
+
+    <header class="header-container">
+      <h1>Who Wants to Buy an Owlbear?</h1>
+    </header>
+
     <main>
       <h2>I want to create a</h2>
       <div class="flex-container">
