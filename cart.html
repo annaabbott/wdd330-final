@@ -21,15 +21,16 @@
     <link href="styles/normalize.css" rel="stylesheet" />
     <link href="styles/index.css" rel="stylesheet" />
     <link href="styles/large.css" rel="stylesheet" />
-    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/cart.js" type="module"></script>
   </head>
   <body>
     <nav id="sideNav">
       <button id="NavOpenBtn"></button>
       <ul class="sideNavItems">
-        <li><a href="#" title="home" class="active">Home</a></li>
+        <li><a href="index.html" title="home">Home</a></li>
         <li><a href="armory.html" title="armory">Blacksmith's Shop</a></li>
         <li><a href="potions.html" title="potions">Magic Shop</a></li>
+        <li><a href="#" title="cart" class="active"></a></li>
       </ul>
       <div id="overlay"></div>
     </nav>
@@ -40,13 +41,8 @@
     </header>
 
     <main>
-      <h2>I want to create a</h2>
-      <div class="flex-container">
-        <a href="armory.html"
-          ><div class="link-container">Blacksmith's Shop</div></a
-        >
-        <a href="potions.html"><div class="link-container">Magic Shop</div></a>
-      </div>
+      <h2>PC Inventory</h2>
+      <section id="cart"></section>
     </main>
     <footer>&copy;2025 Anna Abbott</footer>
   </body>
