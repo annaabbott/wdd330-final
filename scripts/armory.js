@@ -1,3 +1,5 @@
+import { Navigation } from "./navigation.js";
+
 async function getData(url) {
   //   const url = "https://api.open5e.com/v2/armor/?format=json";
   try {
@@ -13,6 +15,11 @@ async function getData(url) {
   }
 }
 async function renderArmory() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = new Navigation();
+    nav.setUpListeners();
+  });
+
   const armorURL = "https://api.open5e.com/v2/armor/?format=json";
   const armorData = await getData(armorURL);
   armorData.results.forEach((armorElement) => {
