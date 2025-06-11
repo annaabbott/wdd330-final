@@ -31,7 +31,7 @@ async function renderArmory() {
   const weaponsURL = "https://api.open5e.com/v2/weapons/?format=json";
   const weaponsData = await getData(weaponsURL);
   weaponsData.results.forEach((weaponElement) => {
-    createWeponCard(weaponElement);
+    createWeaponCard(weaponElement);
   });
 }
 
@@ -51,13 +51,19 @@ function createArmorCard(armorData) {
   const buyArmorBtn = document.createElement("button");
   buyArmorBtn.innerText = `Buy Item`;
   armorCard.appendChild(buyArmorBtn);
+  const viewCart = document.createElement("div");
+  armorCard.appendChild(viewCart);
+  const cartAnchor = document.createElement("a");
+  cartAnchor.innerText = `View Cart`;
+  viewCart.appendChild(cartAnchor);
+  cartAnchor.setAttribute("href", "../cart.html");
 
   buyArmorBtn.addEventListener("click", () => {
     localStorage.setItem(armorData.name, armorData.name);
   });
 }
 
-function createWeponCard(weaponsData) {
+function createWeaponCard(weaponsData) {
   const weaponDiv = document.querySelector("#weaponContainer");
   const weaponCard = document.createElement("div");
   weaponDiv.appendChild(weaponCard);
@@ -78,6 +84,12 @@ function createWeponCard(weaponsData) {
   const buyWeaponBtn = document.createElement("button");
   buyWeaponBtn.innerText = `Buy Item`;
   weaponCard.appendChild(buyWeaponBtn);
+  const viewCart = document.createElement("div");
+  weaponCard.appendChild(viewCart);
+  const cartAnchor = document.createElement("a");
+  cartAnchor.innerText = `View Cart`;
+  viewCart.appendChild(cartAnchor);
+  cartAnchor.setAttribute("href", "../cart.html");
 
   buyWeaponBtn.addEventListener("click", () => {
     localStorage.setItem(weaponsData.name, weaponsData.name);
