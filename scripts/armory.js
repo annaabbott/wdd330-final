@@ -1,4 +1,5 @@
 import { Navigation } from "./navigation.js";
+import { getPurchases } from "./cart.js";
 
 async function getData(url) {
   //   const url = "https://api.open5e.com/v2/armor/?format=json";
@@ -18,6 +19,7 @@ async function renderArmory() {
   document.addEventListener("DOMContentLoaded", () => {
     const nav = new Navigation();
     nav.setUpListeners();
+    let pcInventory = getPurchases();
   });
 
   const armorURL = "https://api.open5e.com/v2/armor/?format=json";
@@ -46,6 +48,13 @@ function createArmorCard(armorData) {
   const armorClass = document.createElement("p");
   armorClass.innerText = `Armor Class (AC): ${armorData.ac_display}`;
   armorCard.appendChild(armorClass);
+  const buyArmorBtn = document.createElement("button");
+  buyArmorBtn.innerText = `Buy Item`;
+  armorCard.appendChild(buyArmorBtn);
+
+  buyArmorBtn.addEventListener("click", () => {
+    localStorage.setItem(armorData.name, armorData.name);
+  });
 }
 
 function createWeponCard(weaponsData) {
@@ -66,6 +75,13 @@ function createWeponCard(weaponsData) {
   const weaponReach = document.createElement("p");
   weaponReach.innerText = `Range: ${weaponsData.range}; Reach: ${weaponsData.reach}`;
   weaponCard.appendChild(weaponReach);
+  const buyWeaponBtn = document.createElement("button");
+  buyWeaponBtn.innerText = `Buy Item`;
+  weaponCard.appendChild(buyWeaponBtn);
+
+  buyWeaponBtn.addEventListener("click", () => {
+    localStorage.setItem(weaponsData.name, weaponsData.name);
+  });
 }
 
 renderArmory();

@@ -19,7 +19,7 @@ async function renderMagicMart() {
     nav.setUpListeners();
   });
 
-  const magicURL = "https://api.open5e.com/v1/magicitems/?format=json";
+  const magicURL = "https://api.open5e.com/v1/magicitems/?type=Wondrous%20Item";
   const magicData = await getData(magicURL);
   magicData.results.forEach((magicItemElement) => {
     createArmorCard(magicItemElement);
