@@ -19,7 +19,7 @@ async function renderArmory() {
   document.addEventListener("DOMContentLoaded", () => {
     const nav = new Navigation();
     nav.setUpListeners();
-    let pcInventory = getPurchases();
+    // let pcInventory = getPurchases();
   });
 
   const armorURL = "https://api.open5e.com/v2/armor/?format=json";

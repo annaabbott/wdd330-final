@@ -1,4 +1,5 @@
 import { Navigation } from "./navigation.js";
+import { getPurchases } from "./cart.js";
 
 async function getData(url) {
   try {
@@ -22,11 +23,11 @@ async function renderMagicMart() {
   const magicURL = "https://api.open5e.com/v1/magicitems/?type=Wondrous%20Item";
   const magicData = await getData(magicURL);
   magicData.results.forEach((magicItemElement) => {
-    createArmorCard(magicItemElement);
+    createMagicCard(magicItemElement);
   });
 }
 
-function createArmorCard(magicData) {
+function createMagicCard(magicData) {
   const magicDiv = document.querySelector("#magicItemContainer");
   const magicCard = document.createElement("div");
   magicDiv.appendChild(magicCard);
@@ -39,6 +40,19 @@ function createArmorCard(magicData) {
   const magicItemDesc = document.createElement("p");
   magicItemDesc.innerText = `Armor Class (AC): ${magicData.desc}`;
   magicCard.appendChild(magicItemDesc);
+  const buyMagicBtn = document.createElement("button");
+  buyMagicBtn.innerText = `Buy Item`;
+  magicCard.appendChild(buyMagicBtn);
+  const viewCart = document.createElement("div");
+  magicCard.appendChild(viewCart);
+  const cartAnchor = document.createElement("a");
+  cartAnchor.innerText = `View Cart`;
+  viewCart.appendChild(cartAnchor);
+  cartAnchor.setAttribute("href", "../cart.html");
+
+  buyMagicBtn.addEventListener("click", () => {
+    localStorage.setItem(magicData.name, magicData.name);
+  });
 }
 
 renderMagicMart();
