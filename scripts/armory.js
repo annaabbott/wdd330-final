@@ -16,12 +16,6 @@ async function getData(url) {
   }
 }
 async function renderArmory() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const nav = new Navigation();
-    nav.setUpListeners();
-    // let pcInventory = getPurchases();
-  });
-
   const armorURL = "https://api.open5e.com/v2/armor/?format=json";
   const armorData = await getData(armorURL);
   armorData.results.forEach((armorElement) => {
@@ -32,6 +26,12 @@ async function renderArmory() {
   const weaponsData = await getData(weaponsURL);
   weaponsData.results.forEach((weaponElement) => {
     createWeaponCard(weaponElement);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = new Navigation();
+    nav.setUpListeners();
+    // let pcInventory = getPurchases();
   });
 }
 

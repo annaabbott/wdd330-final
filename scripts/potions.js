@@ -15,15 +15,15 @@ async function getData(url) {
   }
 }
 async function renderMagicMart() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const nav = new Navigation();
-    nav.setUpListeners();
-  });
-
   const magicURL = "https://api.open5e.com/v1/magicitems/?type=Wondrous%20Item";
   const magicData = await getData(magicURL);
   magicData.results.forEach((magicItemElement) => {
     createMagicCard(magicItemElement);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = new Navigation();
+    nav.setUpListeners();
   });
 }
 
