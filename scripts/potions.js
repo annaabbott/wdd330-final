@@ -44,6 +44,7 @@ function createMagicCard(magicData) {
   const description = truncateDescription(magicData);
   const magicDiv = document.querySelector("#magicItemContainer");
   const magicCard = document.createElement("div");
+  magicCard.className = "card";
   magicDiv.appendChild(magicCard);
   const magicItemName = document.createElement("h2");
   magicItemName.innerText = magicData.name;
@@ -57,11 +58,13 @@ function createMagicCard(magicData) {
   magicCard.appendChild(magicItemDesc);
   const buyMagicBtn = document.createElement("button");
   buyMagicBtn.innerText = `Buy Item`;
+  buyMagicBtn.classList = "button";
   magicCard.appendChild(buyMagicBtn);
   const viewCart = document.createElement("div");
   magicCard.appendChild(viewCart);
   const cartAnchor = document.createElement("a");
   cartAnchor.innerText = `View Cart`;
+  cartAnchor.classList = "anchorBtn";
   viewCart.appendChild(cartAnchor);
   cartAnchor.setAttribute("href", "../cart.html");
 

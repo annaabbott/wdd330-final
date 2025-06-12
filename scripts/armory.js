@@ -37,6 +37,7 @@ async function renderArmory() {
 function createArmorCard(armorData) {
   const armorDiv = document.querySelector("#armorContainer");
   const armorCard = document.createElement("div");
+  armorCard.classList = "card";
   armorDiv.appendChild(armorCard);
   const armorName = document.createElement("h2");
   armorName.innerText = armorData.name;
@@ -49,10 +50,12 @@ function createArmorCard(armorData) {
   armorCard.appendChild(armorClass);
   const buyArmorBtn = document.createElement("button");
   buyArmorBtn.innerText = `Buy Item`;
+  buyArmorBtn.classList = "button";
   armorCard.appendChild(buyArmorBtn);
   const viewCart = document.createElement("div");
   armorCard.appendChild(viewCart);
   const cartAnchor = document.createElement("a");
+  cartAnchor.classList = "anchorBtn";
   cartAnchor.innerText = `View Cart`;
   viewCart.appendChild(cartAnchor);
   cartAnchor.setAttribute("href", "../cart.html");
@@ -65,6 +68,7 @@ function createArmorCard(armorData) {
 function createWeaponCard(weaponsData) {
   const weaponDiv = document.querySelector("#weaponContainer");
   const weaponCard = document.createElement("div");
+  weaponCard.classList = "card";
   weaponDiv.appendChild(weaponCard);
   const weaponName = document.createElement("h2");
   weaponName.innerText = weaponsData.name;
@@ -82,11 +86,13 @@ function createWeaponCard(weaponsData) {
   weaponCard.appendChild(weaponReach);
   const buyWeaponBtn = document.createElement("button");
   buyWeaponBtn.innerText = `Buy Item`;
+  buyWeaponBtn.classList = "button";
   weaponCard.appendChild(buyWeaponBtn);
   const viewCart = document.createElement("div");
   weaponCard.appendChild(viewCart);
   const cartAnchor = document.createElement("a");
   cartAnchor.innerText = `View Cart`;
+  cartAnchor.classList = "anchorBtn";
   viewCart.appendChild(cartAnchor);
   cartAnchor.setAttribute("href", "../cart.html");
 
