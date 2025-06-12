@@ -1,5 +1,6 @@
 import { Navigation } from "./navigation.js";
-import { getPurchases } from "./cart.js";
+
+const PREVIEW_LENGTH = 100;
 
 async function getData(url) {
   try {
@@ -17,6 +18,7 @@ async function getData(url) {
 async function renderMagicMart() {
   const magicURL = "https://api.open5e.com/v1/magicitems/?type=Wondrous%20Item";
   const magicData = await getData(magicURL);
+
   magicData.results.forEach((magicItemElement) => {
     createMagicCard(magicItemElement);
   });
@@ -27,7 +29,19 @@ async function renderMagicMart() {
   });
 }
 
+function truncateDescription(magicData) {
+  return magicData.desc;
+  // const fullDescription = magicData.desc;
+  // if (fullDescription.length > PREVIEW_LENGTH) {
+  //   let truncated = fullDescription.slice(0, PREVIEW_LENGTH) + "...";
+  //   return truncated;
+  // } else {
+  //   return fullDescription;
+  // }
+}
+
 function createMagicCard(magicData) {
+  const description = truncateDescription(magicData);
   const magicDiv = document.querySelector("#magicItemContainer");
   const magicCard = document.createElement("div");
   magicDiv.appendChild(magicCard);
@@ -38,7 +52,8 @@ function createMagicCard(magicData) {
   magicItemRarity.innerText = `Type: ${magicData.rarity}`;
   magicCard.appendChild(magicItemRarity);
   const magicItemDesc = document.createElement("p");
-  magicItemDesc.innerText = `Armor Class (AC): ${magicData.desc}`;
+  magicItemDesc.className = "description";
+  magicItemDesc.innerText = `Item Description: ${description}`;
   magicCard.appendChild(magicItemDesc);
   const buyMagicBtn = document.createElement("button");
   buyMagicBtn.innerText = `Buy Item`;

@@ -1,5 +1,4 @@
 import { Navigation } from "./navigation.js";
-import { getPurchases } from "./cart.js";
 
 async function getData(url) {
   //   const url = "https://api.open5e.com/v2/armor/?format=json";
