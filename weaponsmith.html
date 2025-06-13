@@ -20,38 +20,35 @@
 
     <link href="styles/normalize.css" rel="stylesheet" />
     <link href="styles/index.css" rel="stylesheet" />
-    <link href="styles/large.css" rel="stylesheet" />
-    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/weapons.js" type="module"></script>
+
+    <!-- <link rel="icon" href="images/favicon.ico" /> -->
   </head>
   <body>
     <nav id="sideNav">
       <button id="NavOpenBtn"></button>
       <ul class="sideNavItems">
-        <li><a href="#" title="home" class="active">Home</a></li>
-        <li><a href="armory.html" title="armory">Armory</a></li>
-        <li><a href="potions.html" title="potions">Magic Shop</a></li>
+        <li><a href="index.html" title="home">Home</a></li>
         <li>
-          <a href="weaponsmith.html" title="weaponsmith">Weaponsmith's Shop</a>
+          <a href="armory.html" title="armory" class="active"
+            >Blacksmith's Shop</a
+          >
         </li>
+        <li><a href="potions.html" title="potions">Magic Shop</a></li>
+        <a href="weaponsmith.html"><div>Weaponsmith's Shop</div></a>
         <li><a href="cart.html" title="cart"></a></li>
       </ul>
       <div id="overlay"></div>
     </nav>
     <button id="NavHamburgerBtn"></button>
 
-    <header class="header-container">
-      <h1>Who Wants to Buy an Owlbear?</h1>
-    </header>
-
+    <header><h1>Who Wants to Buy an Owlbear?</h1></header>
     <main>
-      <h2>I want to create a</h2>
-      <div class="flex-container">
-        <a href="armory.html"><div class="link-container">Armory</div></a>
-        <a href="potions.html"><div class="link-container">Magic Shop</div></a>
-        <a href="weaponsmith.html"
-          ><div class="link-container">Weaponsmith's Shop</div></a
-        >
-      </div>
+      <h2>Metalworks: The Stinging Nettle</h2>
+      <section>
+        <h2>Weapons</h2>
+        <div id="stockContainer">[Loading...]</div>
+      </section>
     </main>
     <footer>&copy;2025 Anna Abbott</footer>
   </body>
