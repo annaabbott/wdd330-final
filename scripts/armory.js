@@ -1,5 +1,6 @@
 import { Navigation } from "./navigation.js";
 import Open5eApi from "./open5e.js";
+import { selectRandomItems } from "./utils.js";
 
 class ArmoryController {
   constructor(api, nav) {
@@ -9,7 +10,8 @@ class ArmoryController {
   }
 
   async initializeStock() {
-    this.stock = await this.api.getArmoryStock();
+    const items = await this.api.getArmoryStock();
+    this.stock = selectRandomItems(items, 5);
   }
 
   clearStock() {
