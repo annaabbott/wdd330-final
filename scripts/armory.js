@@ -2,8 +2,9 @@ import { Navigation } from "./navigation.js";
 import Open5eApi from "./open5e.js";
 
 class ArmoryController {
-  constructor(api) {
+  constructor(api, nav) {
     this.api = api;
+    this.nav = nav;
     this.stock = [];
   }
 
@@ -48,6 +49,7 @@ class ArmoryController {
   }
 
   async render() {
+    this.nav.setUpListeners();
     await this.initializeStock();
 
     this.clearStock();
@@ -57,7 +59,7 @@ class ArmoryController {
   }
 }
 
-const controller = new ArmoryController(new Open5eApi());
+const controller = new ArmoryController(new Open5eApi(), new Navigation());
 controller.render();
 
 // async function getData(url) {
