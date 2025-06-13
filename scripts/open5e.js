@@ -9,9 +9,8 @@ export default class Open5eApi {
           throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
-        debugger;
-        results.push(...json.data.results);
-        url = json.data.next;
+        results.push(...json.results);
+        url = json.next;
       }
     } catch (error) {
       console.error(error.message);
