@@ -18,7 +18,10 @@ async function getData(url) {
 async function renderMagicMart() {
   const magicURL = "https://api.open5e.com/v1/magicitems/?type=Wondrous%20Item";
   const magicData = await getData(magicURL);
-
+  // console.log("magicData.results:", magicData.results);
+  const magicItems = magicData.results;
+  const filteredSubset = magicItems.filter((item) => magicItems < 0.1);
+  console.log("filteredSubset: ", filteredSubset);
   magicData.results.forEach((magicItemElement) => {
     createMagicCard(magicItemElement);
   });
@@ -31,13 +34,6 @@ async function renderMagicMart() {
 
 function truncateDescription(magicData) {
   return magicData.desc;
-  // const fullDescription = magicData.desc;
-  // if (fullDescription.length > PREVIEW_LENGTH) {
-  //   let truncated = fullDescription.slice(0, PREVIEW_LENGTH) + "...";
-  //   return truncated;
-  // } else {
-  //   return fullDescription;
-  // }
 }
 
 function createMagicCard(magicData) {
