@@ -156,6 +156,22 @@ a {
   border-radius: 1rem;
 }
 
+.merchantInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px var(--text-color) solid;
+  padding: 0 1rem;
+}
+
+.merchantInfo h3 {
+  padding-left: 1rem;
+}
+
+.merchantInfo p {
+  padding-left: 1rem;
+}
+
 .card {
   background-color: #fff;
   margin: 1rem 0;
