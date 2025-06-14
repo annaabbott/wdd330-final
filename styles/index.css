@@ -114,6 +114,22 @@ main {
   margin: 0;
 }
 
+#bladesmithImg {
+  width: 100%;
+}
+
+#potionImg {
+  width: 100%;
+}
+
+#magic {
+  width: 100%;
+}
+
+#armor {
+  width: 100%;
+}
+
 main h2 {
   margin: 0;
   padding: 3rem 0;

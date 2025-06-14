@@ -1,7 +1,7 @@
 export default class Open5eApi {
   async getMagicItemsStock() {
     const results = [];
-    let url = "https://api.open5e.com/v1/magicitems/?type=Wondrous%20Item";
+    let url = "https://api.open5e.com/v1/magicitems/?type=Wondrous+Item";
     try {
       while (url) {
         const response = await fetch(url);
@@ -56,9 +56,9 @@ export default class Open5eApi {
     return results;
   }
 
-  async getPotionsStock() {
+  async getPotionStock() {
     const results = [];
-    let url = "https://api.open5e.com/v2/weapons/?type=potion";
+    let url = "https://api.open5e.com/v1/magicitems/?type=Potion";
     try {
       while (url) {
         const response = await fetch(url);
