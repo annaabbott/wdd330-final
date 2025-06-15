@@ -185,6 +185,12 @@ a {
   padding: 1rem 0;
   width: 100%;
   border-radius: 1rem;
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.button:hover {
+  opacity: 1;
 }
 
 .anchorBtn {
@@ -193,6 +199,12 @@ a {
   text-align: center;
   margin: 1rem 0;
   border-radius: 1rem;
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.anchorBtn:hover {
+  opacity: 1;
 }
 
 .description {

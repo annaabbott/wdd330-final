@@ -27,18 +27,18 @@
     <nav id="sideNav">
       <button id="NavOpenBtn"></button>
       <ul class="sideNavItems">
-        <li><a href="index.html" title="home">Home</a></li>
+        <li><a href="index.html" title="home" class="active">Home</a></li>
         <li>
-          <a href="armory.html" title="armory" class="active"
-            >Blacksmith's Shop</a
-          >
+          <a href="armory.html" title="armory">Armory</a>
         </li>
         <li><a href="potions.html" title="potions">Apothecary</a></li>
         <li>
-          <a href="weaponsmith.html" title="weapons">Weaponsmith's Shop</a>
+          <a href="weaponsmith.html" title="weapons">Bladesmith's Shop</a>
         </li>
-        <li><a href="magicItems.html" title="magicItems"></a></li>
-        <li><a href="cart.html" title="cart"></a></li>
+        <li>
+          <a href="magicItems.html" title="magicItems">Enchanted Items</a>
+        </li>
+        <li><a href="cart.html" title="cart">View the Party's Purchases</a></li>
       </ul>
       <div id="overlay"></div>
     </nav>
@@ -51,13 +51,17 @@
     <main>
       <h2>I want to create a</h2>
       <div class="flex-container">
-        <a href="armory.html"><div class="link-container">Armory</div></a>
-        <a href="potions.html"><div class="link-container">Apothecary</div></a>
-        <a href="weaponsmith.html"
+        <a href="armory.html" class="anchorBtn"
+          ><div class="link-container">Armory</div></a
+        >
+        <a href="potions.html" class="anchorBtn"
+          ><div class="link-container">Apothecary</div></a
+        >
+        <a href="weaponsmith.html" class="anchorBtn"
           ><div class="link-container">Weaponsmith's Shop</div></a
         >
-        <a href="magicItems.html"
-          ><div class="link-container">Magic Shop</div></a
+        <a href="magicItems.html" class="anchorBtn"
+          ><div class="link-container">Enchanted Items</div></a
         >
       </div>
     </main>
