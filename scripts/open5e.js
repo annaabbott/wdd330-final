@@ -1,6 +1,10 @@
 export default class Open5eApi {
   async getMagicItemsStock() {
     const results = [];
+    const spinner = document.querySelector("#spinner");
+
+    spinner.style.display = "block";
+
     let url = "https://api.open5e.com/v1/magicitems/?type=Wondrous+Item";
     try {
       while (url) {
@@ -14,6 +18,8 @@ export default class Open5eApi {
       }
     } catch (error) {
       console.error(error.message);
+    } finally {
+      spinner.style.display = "none";
     }
     return results;
   }

@@ -1,4 +1,8 @@
 @media only screen and (min-width: 38rem) {
+  NavHamburgerBtn {
+    width: 4%;
+  }
+
   #NavOpenBtn {
     display: none;
   }
@@ -11,5 +15,11 @@
 
   nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
