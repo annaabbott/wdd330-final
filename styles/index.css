@@ -15,7 +15,7 @@ body {
   font-style: normal;
   --primary-color: #8b9f7d;
   --secondary-color: #b1afa8;
-  --accent: #e40712;
+  --accent: #922f27;
   --text-color: #09090b;
 }
 
@@ -174,16 +174,22 @@ a {
   border-radius: 50%;
 }
 
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #spinner {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
   margin-top: 2rem;
-  border: 2rem solid var(--secondary-color);
+  border: 1rem solid var(--secondary-color);
   border-radius: 50%;
-  border-top: 2rem solid var(--accent);
-  width: 10rem;
-  height: 10rem;
+  border-top: 1rem solid var(--accent);
+  width: 6rem;
+  height: 6rem;
   animation: spin 2s linear infinite;
 }
 
