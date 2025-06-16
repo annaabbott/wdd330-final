@@ -39,6 +39,8 @@ export default class Open5eApi {
       }
     } catch (error) {
       console.error(error.message);
+    } finally {
+      spinner.style.display = "none";
     }
     return results;
   }
@@ -58,6 +60,8 @@ export default class Open5eApi {
       }
     } catch (error) {
       console.error(error.message);
+    } finally {
+      spinner.style.display = "none";
     }
     return results;
   }
@@ -77,6 +81,8 @@ export default class Open5eApi {
       }
     } catch (error) {
       console.error(error.message);
+    } finally {
+      spinner.style.display = "none";
     }
     return results;
   }
