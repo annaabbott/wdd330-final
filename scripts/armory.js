@@ -64,6 +64,12 @@ class ArmoryController {
     buyArmorBtn.innerText = `Buy Item`;
     buyArmorBtn.classList = "button";
     armorCard.appendChild(buyArmorBtn);
+    const userFeedback = document.createElement("div");
+    userFeedback.classList.add("userFeedback");
+
+    userFeedback.innerText = `${armorData.name} successfully purchased!`;
+    armorCard.appendChild(userFeedback);
+
     const viewCart = document.createElement("div");
     armorCard.appendChild(viewCart);
     const cartAnchor = document.createElement("a");
@@ -74,6 +80,10 @@ class ArmoryController {
 
     buyArmorBtn.addEventListener("click", () => {
       localStorage.setItem(armorData.name, armorData.name);
+      userFeedback.classList.add("show");
+      setTimeout(function () {
+        userFeedback.classList.remove("show");
+      }, 3000);
     });
   }
 

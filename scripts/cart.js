@@ -28,6 +28,9 @@ async function renderPurchasesPage() {
     nav.setUpListeners();
   });
 
+  document.querySelector("#backBtn").addEventListener("click", () => {
+    history.back();
+  });
   displayPurchases();
 }
 
