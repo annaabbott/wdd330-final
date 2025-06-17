@@ -65,6 +65,13 @@ class PotionController {
     buyPotionBtn.innerText = `Buy Item`;
     buyPotionBtn.classList = "button";
     potionCard.appendChild(buyPotionBtn);
+
+    const userFeedback = document.createElement("div");
+    userFeedback.classList.add("userFeedback");
+
+    userFeedback.innerText = `${potionData.name} successfully purchased!`;
+    potionCard.appendChild(userFeedback);
+
     const viewCart = document.createElement("div");
     potionCard.appendChild(viewCart);
     const cartAnchor = document.createElement("a");
@@ -75,6 +82,10 @@ class PotionController {
 
     buyPotionBtn.addEventListener("click", () => {
       localStorage.setItem(potionData.name, potionData.name);
+      userFeedback.classList.add("show");
+      setTimeout(function () {
+        userFeedback.classList.remove("show");
+      }, 3000);
     });
   }
 

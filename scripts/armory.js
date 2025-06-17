@@ -64,6 +64,7 @@ class ArmoryController {
     buyArmorBtn.innerText = `Buy Item`;
     buyArmorBtn.classList = "button";
     armorCard.appendChild(buyArmorBtn);
+
     const userFeedback = document.createElement("div");
     userFeedback.classList.add("userFeedback");
 
