@@ -15,9 +15,10 @@ function displayPurchases() {
     removeFromInventoryBtn.innerText = `X`;
     purchasedItemDiv.appendChild(removeFromInventoryBtn);
 
-    removeFromInventoryBtn.addEventListener("click", () =>
-      removeFromInventoryBtn.classList.toggle("hide")
-    );
+    removeFromInventoryBtn.addEventListener("click", () => {
+      localStorage.removeItem(key);
+      purchasedItemDiv.remove();
+    });
   });
 }
 
