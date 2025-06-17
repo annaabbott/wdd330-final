@@ -17,9 +17,19 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  .flex-container {
+  #stockContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+
+  /* .flex-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
+
+  .flex-container .card {
+    width: 250px;
+  } */
 }
