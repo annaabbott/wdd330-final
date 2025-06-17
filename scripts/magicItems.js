@@ -65,6 +65,13 @@ class MagicItemsController {
     buyMagicBtn.innerText = `Buy Item`;
     buyMagicBtn.classList = "button";
     magicCard.appendChild(buyMagicBtn);
+
+    const userFeedback = document.createElement("div");
+    userFeedback.classList.add("userFeedback");
+
+    userFeedback.innerText = `${magicData.name} successfully purchased!`;
+    magicCard.appendChild(userFeedback);
+
     const viewCart = document.createElement("div");
     magicCard.appendChild(viewCart);
     const cartAnchor = document.createElement("a");
@@ -75,6 +82,10 @@ class MagicItemsController {
 
     buyMagicBtn.addEventListener("click", () => {
       localStorage.setItem(magicData.name, magicData.name);
+      userFeedback.classList.add("show");
+      setTimeout(function () {
+        userFeedback.classList.remove("show");
+      }, 3000);
     });
   }
 

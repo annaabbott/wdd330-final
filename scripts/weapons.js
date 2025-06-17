@@ -70,6 +70,13 @@ class WeaponsController {
     buyWeaponBtn.innerText = `Buy Item`;
     buyWeaponBtn.classList = "button";
     weaponCard.appendChild(buyWeaponBtn);
+
+    const userFeedback = document.createElement("div");
+    userFeedback.classList.add("userFeedback");
+
+    userFeedback.innerText = `${weaponsData.name} successfully purchased!`;
+    weaponCard.appendChild(userFeedback);
+
     const viewCart = document.createElement("div");
     weaponCard.appendChild(viewCart);
     const cartAnchor = document.createElement("a");
@@ -80,6 +87,10 @@ class WeaponsController {
 
     buyWeaponBtn.addEventListener("click", () => {
       localStorage.setItem(weaponsData.name, weaponsData.name);
+      userFeedback.classList.add("show");
+      setTimeout(function () {
+        userFeedback.classList.remove("show");
+      }, 3000);
     });
   }
 
