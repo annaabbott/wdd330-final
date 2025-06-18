@@ -83,7 +83,7 @@ class WeaponsController {
     cartAnchor.innerText = `View Cart`;
     cartAnchor.classList = "anchorBtn";
     viewCart.appendChild(cartAnchor);
-    cartAnchor.setAttribute("href", "../cart.html");
+    cartAnchor.setAttribute("href", "./cart.html");
 
     buyWeaponBtn.addEventListener("click", () => {
       localStorage.setItem(weaponsData.name, weaponsData.name);

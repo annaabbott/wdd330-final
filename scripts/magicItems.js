@@ -78,7 +78,7 @@ class MagicItemsController {
     cartAnchor.innerText = `View Cart`;
     cartAnchor.classList = "anchorBtn";
     viewCart.appendChild(cartAnchor);
-    cartAnchor.setAttribute("href", "../cart.html");
+    cartAnchor.setAttribute("href", "./cart.html");
 
     buyMagicBtn.addEventListener("click", () => {
       localStorage.setItem(magicData.name, magicData.name);

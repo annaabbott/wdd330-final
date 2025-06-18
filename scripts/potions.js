@@ -78,7 +78,7 @@ class PotionController {
     cartAnchor.innerText = `View Cart`;
     cartAnchor.classList = "anchorBtn";
     viewCart.appendChild(cartAnchor);
-    cartAnchor.setAttribute("href", "../cart.html");
+    cartAnchor.setAttribute("href", "./cart.html");
 
     buyPotionBtn.addEventListener("click", () => {
       localStorage.setItem(potionData.name, potionData.name);

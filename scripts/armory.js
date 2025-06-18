@@ -77,7 +77,7 @@ class ArmoryController {
     cartAnchor.classList = "anchorBtn";
     cartAnchor.innerText = `View Cart`;
     viewCart.appendChild(cartAnchor);
-    cartAnchor.setAttribute("href", "../cart.html");
+    cartAnchor.setAttribute("href", "./cart.html");
 
     buyArmorBtn.addEventListener("click", () => {
       localStorage.setItem(armorData.name, armorData.name);
