@@ -209,6 +209,7 @@ a {
   padding: 1rem 4%;
   box-shadow: 0;
   transition: transform 0.2s;
+  position: relative;
 }
 
 .card:hover {
@@ -270,14 +271,14 @@ a {
 .userFeedback {
   visibility: hidden;
   min-width: 10rem;
-  margin-left: 5rem;
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 4%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  left: 50%;
+  left: 10px;
+  right: 10px;
   bottom: 2rem;
 }
 
