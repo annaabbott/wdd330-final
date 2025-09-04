@@ -87,3 +87,11 @@ export default class Open5eApi {
     return results;
   }
 }
+
+// const words = ["owner", "custodian", "processor", "subject", "controller"];
+// const longWords = words.filter((word) => word.length > 8);
+// console.log(longWords); // will output Array ["custodian", "processor", "controller"]
+
+// const array1 = [1, 4, 9, 16];
+// const map1 = array1.map((x) => x * 2);
+// console.log(map1); //output: Array [2, 8, 18, 32]
